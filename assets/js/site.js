@@ -211,7 +211,7 @@
         var a = p.o * (0.6 + 0.4 * Math.sin(p.tw));
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, 6.2832);
-        ctx.fillStyle = 'rgba(47,213,124,' + a.toFixed(3) + ')';
+        ctx.fillStyle = 'rgba(143,224,176,' + a.toFixed(3) + ')';
         ctx.fill();
       }
     })();
@@ -451,10 +451,10 @@
     var svg =
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + w + ' ' + h + '">' +
       '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
-      '<stop offset="0" stop-color="#0c1f14"/><stop offset="1" stop-color="#007a3b"/>' +
+      '<stop offset="0" stop-color="#004d2d"/><stop offset="1" stop-color="#006b3f"/>' +
       '</linearGradient></defs>' +
       '<rect width="' + w + '" height="' + h + '" fill="url(#g)"/>' +
-      '<text x="50%" y="47%" fill="#2fd57c" font-family="Georgia,serif" font-size="' +
+      '<text x="50%" y="47%" fill="#8fe0b0" font-family="Georgia,serif" font-size="' +
       Math.round(Math.min(w, h) / 5) + '" font-weight="700" text-anchor="middle">J</text>' +
       '<text x="50%" y="62%" fill="rgba(255,255,255,.55)" font-family="system-ui,sans-serif" font-size="' +
       Math.round(Math.min(w, h) / 18) + '" text-anchor="middle">' + (label || 'photo') + '</text></svg>';

@@ -6,6 +6,22 @@
 ------------------------------------------------------------------- */
 window.GALLERY = [
 
+  /* ---- The best of the collection ---- */
+  { src: 'images/best-2.jpg', cat: 'events', title: 'With President John Dramani Mahama',
+    meta: 'A moment of recognition' },
+  { src: 'images/best-4.jpg', cat: 'ministry', title: 'Addressing an international tourism forum',
+    meta: 'Deputy Minister, MoTCCA' },
+  { src: 'images/best-9.jpg', cat: 'ministry', title: 'From the heart, at the podium',
+    meta: 'International engagement' },
+  { src: 'images/best-3.jpg', cat: 'ministry', title: 'Delivering the address',
+    meta: 'Tourism forum' },
+  { src: 'images/best-8.jpg', cat: 'ministry', title: 'On the discussion panel',
+    meta: 'Tourism and culture dialogue' },
+  { src: 'images/best-1.jpg', cat: 'office', title: 'At his desk',
+    meta: 'The office' },
+  { src: 'images/best-10.jpg', cat: 'office', title: 'A working day',
+    meta: 'The office' },
+
   /* ---- Ministry: Tourism, Culture & Creative Arts ---- */
   { src: 'images/yj-23.jpg', cat: 'ministry', title: 'Emancipation Day address',
     meta: 'Kwame Nkrumah Memorial Park' },
