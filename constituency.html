@@ -64,27 +64,39 @@
 <main id="main">
 
 <section class="hero">
-  <div class="hero-media" aria-hidden="true">
-    <figure class="on"><img src="images/community-02.jpg" alt="" fetchpriority="high"></figure>
-  </div>
-  <div class="hero-scrim" aria-hidden="true"></div>
-  <div class="wrap hero-body">
-    <p class="eyebrow">Chapter 05 · The Constituency</p>
-    <h1 class="hero-title">
-      <span class="line-mask"><span>Dense, young,</span></span>
-      <span class="line-mask"><span>proudly <em>Zongo.</em></span></span>
-    </h1>
-    <p class="hero-sub">
-      Ayawaso North sits in the heart of Greater Accra. Its challenges are the challenges
-      of a city that grew faster than its drains and its classrooms; its strength is a
-      community that shows up for its own.
-    </p>
-    <div class="hero-meta">
-      <div>Region <b>Greater Accra</b></div>
-      <div>Seat since <b>2016</b></div>
-      <div>Character <b>Urban · Zongo</b></div>
+  <div class="hero-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <canvas class="hero-particles" aria-hidden="true"></canvas>
+
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Chapter 05 · The Constituency</p>
+      <h1 class="hero-title kinetic">Dense, young, proudly <em>Zongo.</em></h1>
+      <p class="hero-sub">
+        Ayawaso North sits in the heart of Greater Accra. Its challenges are the challenges
+        of a city that grew faster than its drains and its classrooms; its strength is a
+        community that shows up for its own.
+      </p>
+      <div class="hero-meta">
+        <div>Region <b>Greater Accra</b></div>
+        <div>Seat since <b>2016</b></div>
+        <div>Character <b>Urban · Zongo</b></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="frame-wrap">
+        <span class="frame-num" aria-hidden="true">05</span>
+        <div class="frame" data-tilt="7">
+          <img src="images/community-04.jpg" alt="In the community, Ayawaso North" fetchpriority="high">
+          <span class="frame-shine" aria-hidden="true"></span>
+        </div>
+        <svg class="frame-ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48"/></svg>
+        <div class="frame-cap"><b>Ayawaso North</b><span>Greater Accra</span></div>
+      </div>
     </div>
   </div>
+
   <div class="scroll-cue" aria-hidden="true">Scroll</div>
 </section>
 
@@ -106,16 +118,16 @@
       </p>
     </div>
     <figure class="rv-img rv" data-d="1" data-plx=".05">
-      <img data-photo src="images/community-01.jpg" alt="Street life in Ayawaso North" width="600" height="450">
+      <img data-photo src="images/community-01.jpg" alt="Street life in Ayawaso North" width="1280" height="960" loading="lazy" decoding="async">
     </figure>
   </div>
 
   <div class="wrap">
     <div class="strip">
-      <figure class="rv-img rv"><img data-photo src="images/community-02.jpg" alt="Community durbar" width="600" height="450"></figure>
-      <figure class="rv-img rv" data-d="1"><img data-photo src="images/community-03.jpg" alt="Young people in the constituency" width="600" height="450"></figure>
-      <figure class="rv-img rv" data-d="2"><img data-photo src="images/community-04.jpg" alt="Project site visit" width="600" height="450"></figure>
-      <figure class="rv-img rv" data-d="3"><img data-photo src="images/yj-70.jpg" alt="Drain construction in a narrow alley" width="620" height="465"></figure>
+      <figure class="rv-img rv"><img data-photo src="images/thumbs/community-02.jpg" alt="Community durbar" width="620" height="465" loading="lazy" decoding="async"></figure>
+      <figure class="rv-img rv" data-d="1"><img data-photo src="images/thumbs/community-03.jpg" alt="Young people in the constituency" width="620" height="465" loading="lazy" decoding="async"></figure>
+      <figure class="rv-img rv" data-d="2"><img data-photo src="images/thumbs/community-04.jpg" alt="Project site visit" width="465" height="620" loading="lazy" decoding="async"></figure>
+      <figure class="rv-img rv" data-d="3"><img data-photo src="images/thumbs/yj-70.jpg" alt="Drain construction in a narrow alley" width="620" height="465" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>
@@ -155,7 +167,7 @@
 </section>
 
 <a class="next-chapter" href="contact.html">
-  <img src="images/yj-28.jpg" alt="" loading="lazy">
+  <img src="images/thumbs/yj-62.jpg" alt="" loading="lazy" decoding="async">
   <div>
     <span class="next-label">Continue to Chapter 06</span>
     <span class="next-title">Contact
@@ -194,6 +206,9 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script defer src="assets/js/site.js"></script>
 </body>
 </html>

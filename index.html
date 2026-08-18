@@ -18,10 +18,18 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-mark">J</div>
-  <div class="loader-name">Yussif <b>Issaka</b> Jajah</div>
-  <div class="loader-line"><i></i></div>
+<!-- opening title sequence -->
+<div class="intro" id="intro" role="dialog" aria-label="Introduction">
+  <div class="intro-stage">
+    <svg class="intro-ring" viewBox="0 0 108 108" aria-hidden="true">
+      <circle cx="54" cy="54" r="51"></circle>
+      <text x="54" y="70" text-anchor="middle">J</text>
+    </svg>
+    <div class="intro-name">YUSSIF ISSAKA JAJAH</div>
+    <p class="intro-role">MP, Ayawaso North · Deputy Minister, Tourism, Culture &amp; Creative Arts</p>
+    <div class="intro-bar" aria-hidden="true"><i></i></div>
+  </div>
+  <button class="intro-skip" type="button">Skip intro</button>
 </div>
 
 <div class="veil" id="veil" aria-hidden="true"><i></i></div>
@@ -70,44 +78,65 @@
 
 <main id="main">
 
-<!-- ============ CINEMATIC HERO ============ -->
+<!-- ============ HERO STAGE ============ -->
 <section class="hero">
-  <div class="hero-media" id="heroShow" aria-hidden="true">
-    <figure><img src="images/yj-23.jpg" alt="" fetchpriority="high"></figure>
-    <figure><img src="images/yj-25.jpg" alt="" loading="lazy"></figure>
-    <figure><img src="images/yj-11.jpg" alt="" loading="lazy"></figure>
-    <figure><img src="images/yj-45.jpg" alt="" loading="lazy"></figure>
-  </div>
-  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <canvas class="hero-particles" aria-hidden="true"></canvas>
 
-  <div class="wrap hero-body">
-    <p class="eyebrow">Republic of Ghana · Ayawaso North</p>
-    <h1 class="hero-title">
-      <span class="line-mask"><span>Service to</span></span>
-      <span class="line-mask"><span>the people who</span></span>
-      <span class="line-mask"><span><em>raised him.</em></span></span>
-    </h1>
-    <p class="hero-sub">
-      From the streets of Maamobi, Nima and Accra New Town to the floor of Parliament,
-      Hon. Yussif Issaka Jajah serves his third term as Member of Parliament for Ayawaso
-      North, and the nation as Deputy Minister for Tourism, Culture and Creative Arts.
-    </p>
-    <div class="hero-cta">
-      <a class="btn btn-gold" href="record.html"><span>Explore the record</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-line" href="about.html"><span>His story</span></a>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Republic of Ghana · Ayawaso North</p>
+      <h1 class="hero-title kinetic">Service to the people who <em>raised him.</em></h1>
+      <p class="hero-sub">
+        From the streets of Maamobi, Nima and Accra New Town to the floor of Parliament,
+        Hon. Yussif Issaka Jajah serves his third term as Member of Parliament for
+        Ayawaso North, and the nation as Deputy Minister for Tourism, Culture and
+        Creative Arts.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="record.html"><span>Explore the record</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="about.html"><span>His story</span></a>
+      </div>
+      <div class="hero-meta">
+        <div>Constituency <b>Ayawaso North</b></div>
+        <div>Office <b>Deputy Minister, MoTCCA</b></div>
+        <div>Mandates <b>2016 · 2020 · 2024</b></div>
+      </div>
     </div>
-    <div class="hero-meta">
-      <div>Constituency <b>Ayawaso North</b></div>
-      <div>Office <b>Deputy Minister, MoTCCA</b></div>
-      <div>Party <b>National Democratic Congress</b></div>
-      <div>Mandates <b>2016 · 2020 · 2024</b></div>
+
+    <div class="hero-visual">
+      <div class="frame-wrap">
+        <div class="hero-dots" id="heroDots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <span class="frame-num" aria-hidden="true">MP</span>
+        <div class="frame" data-tilt="7">
+          <div class="frame-show" id="heroShow">
+            <img src="images/yj-23.jpg" alt="Hon. Jajah addressing Emancipation Day" fetchpriority="high">
+            <img data-src="images/yj-25.jpg" src="images/thumbs/yj-25.jpg" alt="On the red carpet at a national commemoration">
+            <img data-src="images/yj-01.jpg" src="images/thumbs/yj-01.jpg" alt="At a community durbar">
+            <img data-src="images/record-mandate.jpg" src="images/thumbs/record-mandate.jpg" alt="With supporters">
+          </div>
+          <span class="frame-shine" aria-hidden="true"></span>
+        </div>
+        <svg class="frame-ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48"/></svg>
+        <div class="frame-cap"><b>Hon. Yussif Issaka Jajah</b><span>Ayawaso North</span></div>
+      </div>
     </div>
   </div>
 
-  <div class="hero-dots" id="heroDots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <div class="scroll-cue" aria-hidden="true">Scroll</div>
 </section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Maamobi</span><span>Nima</span><span>Accra New Town</span><span>Kotobabi</span>
+    <span>Kawukudi</span><span>Kwatso</span><span>Alajo</span>
+    <span>Maamobi</span><span>Nima</span><span>Accra New Town</span><span>Kotobabi</span>
+    <span>Kawukudi</span><span>Kwatso</span><span>Alajo</span>
+  </div>
+</div>
 
 <!-- ============ STATS ============ -->
 <section class="stats" aria-label="Key figures">
@@ -123,7 +152,7 @@
 <section class="section">
   <div class="wrap duo">
     <figure class="rv-img rv" data-plx=".06">
-      <img data-photo src="images/hero-portrait.jpg" alt="Portrait of Hon. Yussif Issaka Jajah" width="720" height="900">
+      <img data-photo src="images/hero-portrait.jpg" alt="Portrait of Hon. Yussif Issaka Jajah" width="947" height="1400" loading="lazy" decoding="async">
     </figure>
     <div class="prose rv" data-d="1">
       <p class="kicker">The Member of Parliament</p>
@@ -145,68 +174,58 @@
   </div>
 </section>
 
-<!-- ============ MARQUEE ============ -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Maamobi</span><span>Nima</span><span>Accra New Town</span><span>Kotobabi</span>
-    <span>Kawukudi</span><span>Kwatso</span><span>Alajo</span>
-    <span>Maamobi</span><span>Nima</span><span>Accra New Town</span><span>Kotobabi</span>
-    <span>Kawukudi</span><span>Kwatso</span><span>Alajo</span>
+<!-- ============ HORIZONTAL CHAPTER JOURNEY ============ -->
+<section class="hj">
+  <div class="wrap hj-head">
+    <p class="kicker">Explore</p>
+    <h2 class="h-lg kinetic">The story, in <em>chapters.</em></h2>
+    <p class="hj-hint" style="margin-top:1.4rem">Keep scrolling</p>
   </div>
-</div>
-
-<!-- ============ CHAPTERS ============ -->
-<section class="section section-dark">
-  <div class="wrap">
-    <header class="rv">
-      <p class="kicker">Explore</p>
-      <h2 class="h-lg">The story, in <em>chapters.</em></h2>
-    </header>
-
-    <div class="chapters">
-      <a class="chapter rv" href="about.html">
-        <img src="images/thumbs/about-01.jpg" alt="" loading="lazy">
-        <div class="chapter-body">
-          <span class="chapter-num">Chapter 01</span>
-          <span class="chapter-title">About
+  <div class="hj-viewport">
+    <div class="hj-track">
+      <a class="hj-panel" href="about.html">
+        <span class="hj-num">01</span>
+        <div class="hj-media"><img src="images/thumbs/about-01.jpg" srcset="images/thumbs/about-01.jpg 465w, images/about-01.jpg 960w" sizes="(min-width: 539px) 420px, 78vw" alt="" loading="lazy" decoding="async"></div>
+        <div class="hj-body">
+          <span class="hj-title">About
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          <span class="chapter-desc">A son of the Zongo, from Bole and Maamobi to public life.</span>
+          <span class="hj-desc">A son of the Zongo, from Bole and Maamobi to public life.</span>
         </div>
       </a>
-      <a class="chapter rv" data-d="1" href="record.html">
-        <img src="images/thumbs/record-drainage.jpg" alt="" loading="lazy">
-        <div class="chapter-body">
-          <span class="chapter-num">Chapter 02</span>
-          <span class="chapter-title">The Record
+      <a class="hj-panel" href="record.html">
+        <span class="hj-num">02</span>
+        <div class="hj-media"><img src="images/thumbs/record-sports.jpg" srcset="images/thumbs/record-sports.jpg 465w, images/record-sports.jpg 960w" sizes="(min-width: 539px) 420px, 78vw" alt="" loading="lazy" decoding="async"></div>
+        <div class="hj-body">
+          <span class="hj-title">The Record
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          <span class="chapter-desc">Drains, sports, advocacy and a growing mandate.</span>
+          <span class="hj-desc">Drains, sports, advocacy and a growing mandate.</span>
         </div>
       </a>
-      <a class="chapter rv" href="journey.html">
-        <img src="images/thumbs/yj-75.jpg" alt="" loading="lazy">
-        <div class="chapter-body">
-          <span class="chapter-num">Chapter 03</span>
-          <span class="chapter-title">Journey
+      <a class="hj-panel" href="journey.html">
+        <span class="hj-num">03</span>
+        <div class="hj-media"><img src="images/thumbs/yj-75.jpg" srcset="images/thumbs/yj-75.jpg 465w, images/yj-75.jpg 960w" sizes="(min-width: 539px) 420px, 78vw" alt="" loading="lazy" decoding="async"></div>
+        <div class="hj-body">
+          <span class="hj-title">Journey
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          <span class="chapter-desc">Bole. Accra High. Dundee. Parliament. The Ministry.</span>
+          <span class="hj-desc">Bole. Accra High. Dundee. Parliament. The Ministry.</span>
         </div>
       </a>
-      <a class="chapter rv" data-d="1" href="gallery.html">
-        <img src="images/thumbs/yj-11.jpg" alt="" loading="lazy">
-        <div class="chapter-body">
-          <span class="chapter-num">Chapter 04</span>
-          <span class="chapter-title">Gallery
+      <a class="hj-panel" href="gallery.html">
+        <span class="hj-num">04</span>
+        <div class="hj-media"><img src="images/thumbs/yj-11.jpg" srcset="images/thumbs/yj-11.jpg 465w, images/yj-11.jpg 960w" sizes="(min-width: 539px) 420px, 78vw" alt="" loading="lazy" decoding="async"></div>
+        <div class="hj-body">
+          <span class="hj-title">Gallery
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          <span class="chapter-desc">Forty-nine photographs from the field.</span>
+          <span class="hj-desc">Forty-nine photographs from the field.</span>
         </div>
       </a>
-      <a class="chapter rv" data-d="2" href="constituency.html">
-        <img src="images/thumbs/community-02.jpg" alt="" loading="lazy">
-        <div class="chapter-body">
-          <span class="chapter-num">Chapter 05</span>
-          <span class="chapter-title">Constituency
+      <a class="hj-panel" href="constituency.html">
+        <span class="hj-num">05</span>
+        <div class="hj-media"><img src="images/thumbs/community-04.jpg" srcset="images/thumbs/community-04.jpg 465w, images/community-04.jpg 960w" sizes="(min-width: 539px) 420px, 78vw" alt="" loading="lazy" decoding="async"></div>
+        <div class="hj-body">
+          <span class="hj-title">Constituency
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          <span class="chapter-desc">Ayawaso North: dense, young, enterprising, proudly Zongo.</span>
+          <span class="hj-desc">Ayawaso North: dense, young, enterprising, proudly Zongo.</span>
         </div>
       </a>
     </div>
@@ -226,7 +245,7 @@
 
 <!-- ============ NEXT ============ -->
 <a class="next-chapter" href="record.html">
-  <img src="images/record-drainage.jpg" alt="" loading="lazy">
+  <img src="images/thumbs/yj-14.jpg" alt="" loading="lazy" decoding="async">
   <div>
     <span class="next-label">Continue to Chapter 02</span>
     <span class="next-title">The Record
@@ -265,6 +284,9 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script defer src="assets/js/site.js"></script>
 </body>
 </html>
