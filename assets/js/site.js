@@ -211,7 +211,7 @@
         var a = p.o * (0.6 + 0.4 * Math.sin(p.tw));
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, 6.2832);
-        ctx.fillStyle = 'rgba(232,205,111,' + a.toFixed(3) + ')';
+        ctx.fillStyle = 'rgba(47,213,124,' + a.toFixed(3) + ')';
         ctx.fill();
       }
     })();
@@ -368,11 +368,29 @@
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
       });
-    }, { threshold: 0.14, rootMargin: '0px 0px -60px 0px' });
+    }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
     revealables.forEach(function (el) { io.observe(el); });
   } else {
     revealables.forEach(function (el) { el.classList.add('in'); });
   }
+
+  /* Fail-safe: nothing on screen may ever stay hidden. Any .rv whose top
+     has entered the viewport gets revealed even if its observer never
+     fired (very tall images, odd embedding contexts, browser quirks). */
+  function rvSweep() {
+    var vh = window.innerHeight;
+    $$('.rv:not(.in)').forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < vh * .96 && r.bottom > 0) el.classList.add('in');
+    });
+  }
+  var sweepTick = false;
+  window.addEventListener('scroll', function () {
+    if (!sweepTick) { sweepTick = true; requestAnimationFrame(function () { rvSweep(); sweepTick = false; }); }
+  }, { passive: true });
+  window.addEventListener('load', rvSweep);
+  setTimeout(rvSweep, 900);
+  setInterval(rvSweep, 2500);
 
   /* kinetic headings outside heroes play when scrolled into view */
   if ('IntersectionObserver' in window && !reduced) {
@@ -433,10 +451,10 @@
     var svg =
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + w + ' ' + h + '">' +
       '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
-      '<stop offset="0" stop-color="#0d2b1e"/><stop offset="1" stop-color="#114530"/>' +
+      '<stop offset="0" stop-color="#0c1f14"/><stop offset="1" stop-color="#007a3b"/>' +
       '</linearGradient></defs>' +
       '<rect width="' + w + '" height="' + h + '" fill="url(#g)"/>' +
-      '<text x="50%" y="47%" fill="#c9a227" font-family="Georgia,serif" font-size="' +
+      '<text x="50%" y="47%" fill="#2fd57c" font-family="Georgia,serif" font-size="' +
       Math.round(Math.min(w, h) / 5) + '" font-weight="700" text-anchor="middle">J</text>' +
       '<text x="50%" y="62%" fill="rgba(255,255,255,.55)" font-family="system-ui,sans-serif" font-size="' +
       Math.round(Math.min(w, h) / 18) + '" text-anchor="middle">' + (label || 'photo') + '</text></svg>';
