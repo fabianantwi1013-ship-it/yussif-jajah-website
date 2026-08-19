@@ -6,6 +6,12 @@
 ------------------------------------------------------------------- */
 window.GALLERY = [
 
+  /* ---- AI & Digital Skills Training ---- */
+  { src: 'images/yj-53.jpg', cat: 'events', title: 'Graduation of the first AI trainees',
+    meta: 'AI & Digital Skills Training' },
+  { src: 'images/yj-51.jpg', cat: 'events', title: 'At the AI trainees\' graduation',
+    meta: 'AI & Digital Skills Training' },
+
   /* ---- The best of the collection ---- */
   { src: 'images/best-2.jpg', cat: 'events', title: 'With President John Dramani Mahama',
     meta: 'A moment of recognition' },
