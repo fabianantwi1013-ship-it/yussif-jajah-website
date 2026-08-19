@@ -678,7 +678,11 @@ body::after {
 .feature:nth-child(even) .feature-media { order: 2; }
 .feature-media { position: relative; }
 .feature-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--rad); }
-.feature-media.contain img { aspect-ratio: auto; object-fit: contain; background: var(--pine); }
+/* Portrait features show the whole photograph. The aspect ratio must come
+   from the width and height attributes: setting it to auto collapses the
+   box to zero height before load, and a zero-height lazy image never
+   loads at all. */
+.feature-media.contain img { aspect-ratio: 3 / 4; object-fit: contain; background: var(--pine); }
 .feature-media::after {
   content: attr(data-num);
   position: absolute; top: -1.6rem; right: -.4rem;

@@ -6,7 +6,11 @@
 ------------------------------------------------------------------- */
 window.GALLERY = [
 
-  /* ---- AI & Digital Skills Training ---- */
+  /* ---- Youth in AI & Digital Skills Training Workshop ---- */
+  { src: 'images/ai-training-1.jpg', cat: 'events', title: 'A hall full of learners',
+    meta: 'Youth in AI & Digital Skills Training Workshop' },
+  { src: 'images/ai-training-2.jpg', cat: 'events', title: 'Fourteen days at the laptops',
+    meta: 'Youth in AI & Digital Skills Training Workshop' },
   { src: 'images/yj-53.jpg', cat: 'events', title: 'Graduation of the first AI trainees',
     meta: 'AI & Digital Skills Training' },
   { src: 'images/yj-51.jpg', cat: 'events', title: 'At the AI trainees\' graduation',
